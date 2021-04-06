@@ -1,6 +1,5 @@
 package cn.ctgu.junitTest;
 
-
 import cn.ctgu.junit.Commission;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;

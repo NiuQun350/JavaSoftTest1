@@ -15,6 +15,7 @@ public class Configuration {
     /**
      * 读取属性配置文件,即将文件内容写入Properties
      *
+     *
      * @param confFile
      */
     public void fromFile(File confFile) {
