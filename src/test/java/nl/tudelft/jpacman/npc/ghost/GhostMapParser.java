@@ -36,9 +36,20 @@ public final class GhostMapParser extends MapParser {
     @Override
     protected void addSquare(Square[][] grid, List<Ghost> ghosts,
                              List<Square> startPositions, int x, int y, char c) {
+        //C,I,B,P分别代表Clyde，Inky，Blinky，Pinky对象，
+        // 其create方法即通过工厂方法将对应字符注册为对应的对象
         switch (c) {
             case 'C':
                 grid[x][y] = makeGhostSquare(ghosts, ghostFactory.createClyde());
+                break;
+            case 'I':
+                grid[x][y] = makeGhostSquare(ghosts, ghostFactory.createInky());
+                break;
+            case 'B':
+                grid[x][y] = makeGhostSquare(ghosts, ghostFactory.createBlinky());
+                break;
+            case 'Y':
+                grid[x][y] = makeGhostSquare(ghosts, ghostFactory.createPinky());
                 break;
             default:
                 super.addSquare(grid, ghosts, startPositions, x, y, c);
